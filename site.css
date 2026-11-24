@@ -60,6 +60,17 @@ nav a[aria-current=page]{color:var(--ink);border-color:var(--red)}
 .rows li:hover h3{transform:translateX(8px)}
 :root[dir=rtl] .rows li:hover h3{transform:translateX(-8px)}
 .rows p{margin:0;color:var(--muted);max-width:52ch}
+.story-content{display:grid;gap:42px}
+.story-photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
+.story-photos figure{margin:0;text-align:center}
+.story-plate{position:relative;aspect-ratio:1;padding:10px;border:1px solid var(--line2);border-radius:49% 51% 48% 52% / 51% 48% 52% 49%;background:radial-gradient(circle at 50% 45%,#242520 0 56%,#191a17 57% 100%);box-shadow:inset 0 0 0 4px var(--bg),inset 0 0 0 5px var(--line)}
+.story-plate::before{content:"";position:absolute;inset:5px;border:1px solid var(--line2);border-radius:inherit;pointer-events:none}
+.story-photos figure:nth-child(2) .story-plate{border-color:rgba(224,169,74,.68)}
+.story-photos figure:nth-child(3) .story-plate{border-color:rgba(239,85,72,.72)}
+.story-plate img{display:block;width:100%;height:100%;object-fit:cover;border-radius:inherit;filter:saturate(.76) contrast(1.05);transition:filter .35s,transform .5s cubic-bezier(.16,1,.3,1)}
+.story-photos figure:first-child img{object-position:center 45%;filter:grayscale(.8) contrast(1.08)}
+.story-photos figure:hover img{filter:saturate(.95) contrast(1.06);transform:scale(.97)}
+.story-photos figcaption{margin-top:14px;font:italic 500 20px/1.2 var(--display);color:var(--ink)}
 
 .field{display:block;margin-top:14px}
 .field>span{display:block;font-size:13px;color:var(--muted);margin-bottom:4px}
@@ -106,6 +117,8 @@ body::after{content:"";position:fixed;inset:0;z-index:100;pointer-events:none;op
   .logo svg{width:120px}.bar{gap:10px}nav{gap:10px;font-size:13px}.langs button{min-width:30px;padding:0 5px;font-size:12px}
   .rows li{grid-template-columns:minmax(0,1fr);gap:8px}
   .grid2{grid-template-columns:minmax(0,1fr)}
+  .story-photos{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 14px}
+  .story-photos figure:last-child{grid-column:1/-1;width:calc((100% - 14px)/2);justify-self:center}
 }
 @media(max-width:380px){.logo svg{width:100px}.bar{gap:8px}nav{gap:8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv,.rv .stg>*{opacity:1!important;transform:none!important}*,*::before,*::after{animation:none!important;transition:none!important}}

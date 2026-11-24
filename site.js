@@ -57,6 +57,8 @@ en:{
   storyTitle:"Our story",
   story:[["Damascus · 1996","At sixteen, Mohammad Elkhaldy walks into a kitchen for the first time. It is love at first sight."],["Syria, Lebanon, Egypt, the Emirates","More than twenty years in kitchens across the region. He also hosts cooking shows on Syrian television, for home cooks and professionals."],["France · 2015","The war forces him to leave Syria. He starts again in France and cooks with the Refugee Food Festival."],["Cancale · 2018","With chef Olivier Rœllinger he creates a zaatar blend, still sold today by Épices Rœllinger."],["Cairo","He co-founds Jouri, Les Secrets and 80%, and advises restaurants on concept, menu and the psychology of the guest."],["Today","ALK Hospitality & Development brings that path to other restaurants, wherever they are."]],
   storyNote:"Story drawn from public profiles and interviews. To be confirmed by Mohammad Elkhaldy.",
+  storyPhotoGroup:"Story in photographs",storyPhotoAltOne:"A man standing under a single light in a dark studio.",storyPhotoAltTwo:"Open hands resting on a plate between cutlery and a glass.",storyPhotoAltThree:"A hand opening a steaming glass jar with a tomato inside.",
+  storyPhotoCaptionOne:"Behind the scenes",storyPhotoCaptionTwo:"A place at the table",storyPhotoCaptionThree:"Keeping the season",
   svcTitle:"What we do",
   svc:[["Concept and positioning","Who the place is for, what it promises, and how that shows in the room, the menu and the prices."],["Menu and costing","A menu that reads clearly, is costed dish by dish, and sells what the kitchen does best."],["Guest experience","The path from the door to the bill: the welcome, the rhythm at the table, the details guests remember."],["Operations and team","Routines, roles and training so the standard holds on a busy night, not only on opening day."],["Openings and development","From the first plan to opening week, and the next site after that."]],
   joinTitle:"Working with us",
@@ -113,6 +115,8 @@ fr:{
   storyTitle:"Notre histoire",
   story:[["Damas · 1996","À seize ans, Mohammad Elkhaldy entre pour la première fois dans une cuisine. C’est le coup de foudre."],["Syrie, Liban, Égypte, Émirats","Plus de vingt ans dans les cuisines de la région. Il anime aussi des émissions culinaires à la télévision syrienne, pour les amateurs comme pour les professionnels."],["France · 2015","La guerre l’oblige à quitter la Syrie. Il repart de zéro en France et cuisine avec le Refugee Food Festival."],["Cancale · 2018","Avec le chef Olivier Rœllinger, il crée un mélange de zaatar, toujours vendu aujourd’hui par Épices Rœllinger."],["Le Caire","Il cofonde Jouri, Les Secrets et 80 %, et conseille des restaurants sur le concept, la carte et la psychologie du client."],["Aujourd’hui","ALK Hospitality & Development met ce parcours au service d’autres restaurants, où qu’ils soient."]],
   storyNote:"Histoire tirée de profils publics et d’entretiens. À confirmer par Mohammad Elkhaldy.",
+  storyPhotoGroup:"Notre histoire en images",storyPhotoAltOne:"Un homme debout sous une lumière, dans un studio sombre.",storyPhotoAltTwo:"Des mains ouvertes posées sur une assiette, entre des couverts et un verre.",storyPhotoAltThree:"Une main ouvre un bocal en verre fumant contenant une tomate.",
+  storyPhotoCaptionOne:"Dans les coulisses",storyPhotoCaptionTwo:"À table",storyPhotoCaptionThree:"Préserver la saison",
   svcTitle:"Ce que nous faisons",
   svc:[["Concept et positionnement","À qui s’adresse le lieu, ce qu’il promet, et comment cela se voit dans la salle, la carte et les prix."],["Carte et coûts","Une carte claire, chiffrée plat par plat, qui met en avant ce que la cuisine fait le mieux."],["Expérience client","Le parcours de la porte à l’addition : l’accueil, le rythme à table, les détails dont on se souvient."],["Organisation et équipe","Des routines, des rôles et de la formation pour tenir le niveau un soir de rush, pas seulement le jour de l’ouverture."],["Ouvertures et développement","Du premier plan à la semaine d’ouverture, puis l’adresse suivante."]],
   joinTitle:"Travailler avec nous",
@@ -168,6 +172,8 @@ ar:{
   storyTitle:"قصتنا",
   story:[["دمشق · 1996","في السادسة عشرة، يدخل محمد الخالدي المطبخ لأول مرة. حبّ من النظرة الأولى."],["سوريا، لبنان، مصر، الإمارات","أكثر من عشرين عامًا في مطابخ المنطقة. وقدّم أيضًا برامج طبخ على التلفزيون السوري، للهواة والمحترفين."],["فرنسا · 2015","أجبرته الحرب على مغادرة سوريا. بدأ من جديد في فرنسا وطبخ مع مهرجان Refugee Food Festival."],["كانكال · 2018","ابتكر مع الشيف أوليفييه رولينجر خلطة زعتر ما زالت تُباع حتى اليوم لدى Épices Rœllinger."],["القاهرة","شارك في تأسيس جوري ولي سيكريه و80%، ويقدّم الاستشارات للمطاعم في المفهوم والقائمة وسيكولوجية الضيف."],["اليوم","تنقل ALK للضيافة والتطوير هذه المسيرة إلى مطاعم أخرى، أينما كانت."]],
   storyNote:"القصة مأخوذة من ملفات ومقابلات منشورة. بانتظار تأكيد محمد الخالدي.",
+  storyPhotoGroup:"قصتنا بالصور",storyPhotoAltOne:"رجل يقف تحت ضوء واحد في استوديو مظلم.",storyPhotoAltTwo:"يدان مفتوحتان على طبق بين أدوات المائدة وكأس.",storyPhotoAltThree:"يد تفتح مرطبانًا زجاجيًا يتصاعد منه البخار وفيه حبة طماطم.",
+  storyPhotoCaptionOne:"من خلف الكواليس",storyPhotoCaptionTwo:"مكان على المائدة",storyPhotoCaptionThree:"حفظ الموسم",
   svcTitle:"ما نقدمه",
   svc:[["المفهوم والتموضع","لمن هذا المكان، وبماذا يَعِد، وكيف يظهر ذلك في القاعة وقائمة الطعام والأسعار."],["القائمة والتكاليف","قائمة واضحة القراءة، محسوبة التكلفة طبقًا بطبق، تبيع أفضل ما يتقنه المطبخ."],["تجربة الضيف","الرحلة من الباب حتى الفاتورة: الاستقبال، وإيقاع الطاولة، والتفاصيل التي يتذكرها الضيوف."],["التشغيل والفريق","إجراءات وأدوار وتدريب تحافظ على المستوى في الليالي المزدحمة، لا في يوم الافتتاح فقط."],["الافتتاح والتطوير","من الخطة الأولى حتى أسبوع الافتتاح، ثم الفرع التالي."]],
   joinTitle:"العمل معنا",
@@ -221,6 +227,8 @@ function applyText(){
   document.documentElement.lang = LANG;
   document.documentElement.dir = LANG === "ar" ? "rtl" : "ltr";
   document.querySelectorAll("[data-t]").forEach(el => { const v = d[el.dataset.t]; if (typeof v === "string") el.textContent = v; });
+  document.querySelectorAll("[data-t-alt]").forEach(el => { const v = d[el.dataset.tAlt]; if (typeof v === "string") el.alt = v; });
+  document.querySelectorAll("[data-t-aria]").forEach(el => { const v = d[el.dataset.tAria]; if (typeof v === "string") el.setAttribute("aria-label", v); });
   document.querySelectorAll("[data-geo]").forEach(el => el.textContent = d.geo[el.dataset.geo]);
   document.querySelectorAll("#langs button").forEach(b => b.setAttribute("aria-pressed", b.dataset.l === LANG));
 }
