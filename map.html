@@ -163,10 +163,14 @@
 
       <div class="pane" id="p2" hidden>
         <h3 id="p2name"></h3>
+        <div class="fee-card" role="group" data-t-aria="fileFeeLabel">
+          <div><span class="fee-label" data-t="fileFeeLabel"></span><span class="fee-note" id="fileFeeNote"></span></div>
+          <strong data-t="fileFee">$1,000 USD</strong>
+        </div>
         <p style="color:var(--muted);margin:14px 0 0" data-t="feeWhat"></p>
         <div class="row"><a class="btn" id="payBtn" href="#" target="_blank" rel="noopener" data-t="pay">Open my file</a><button class="btn ghost" type="button" id="payNext" data-t="payNext" hidden>I have paid, continue</button><button class="btn ghost" type="button" id="back1" data-t="back">Back</button></div>
         <p class="note" id="payRef" style="margin:12px 0 0"></p>
-        <p class="note" style="margin:12px 0 0" data-t="payMethods"></p>
+        <p class="note" id="paymentStatus" style="margin:12px 0 0"></p>
         <button class="linkbtn" type="button" id="demoPay" data-t="demoPay"></button>
       </div>
 
@@ -344,7 +348,7 @@ async function send(stage, btn, errId){
   btn.disabled = true; btn.textContent = d.sending; $(errId).textContent = "";
   try {
     const r = await fetch(SETTINGS.FORM_ENDPOINT, {method:"POST", headers:{"Content-Type":"application/json", "Accept":"application/json"},
-      body:JSON.stringify({stage, reference:join.ref, restaurant:join.name, country:countryName(join.country, "en"), country_code:join.country, city:join.cityName, person:join.person, contact:join.contact, need:T.en.needs[join.need], visit_date:join.date || "", visit_time:join.slot || "", calendar:calMode(), language:LANG})});
+      body:JSON.stringify({stage, reference:join.ref, restaurant:join.name, country:countryName(join.country, "en"), country_code:join.country, city:join.cityName, person:join.person, contact:join.contact, need:T.en.needs[join.need], file_fee_amount:FILE_FEE_AMOUNT_USD, currency:"USD", visit_date:join.date || "", visit_time:join.slot || "", calendar:calMode(), language:LANG})});
     if (!r.ok) throw new Error(r.status);
     return true;
   } catch (e) { $(errId).textContent = d.eSend; return false; }
@@ -369,6 +373,8 @@ function renderJoin(){
   const slot = $("j-slot").selectedIndex;
   $("j-slot").innerHTML = d.slots.map(s => `<option>${s}</option>`).join(""); if (slot > 0) $("j-slot").selectedIndex = slot;
   $("p2name").textContent = join.name || "";
+  $("paymentStatus").textContent = SETTINGS.REVOLUT_PAYMENT_LINK ? d.payMethods : d.paymentStatus;
+  $("fileFeeNote").textContent = SETTINGS.REVOLUT_PAYMENT_LINK ? d.fileFeeNoteLive : d.fileFeeNote;
   $("payRef").textContent = LIVE && join.ref ? d.payRef(join.ref) : "";
   $("paidLine").textContent = LIVE ? d.paidLineLive : d.paidLine;
   $("bookLead").textContent = calMode() ? d.bookLeadCal : d.bookLead;
