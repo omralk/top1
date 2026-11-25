@@ -11,12 +11,13 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="site.css">
 <style>
-.intro{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;padding-block:40px 24px}
-.intro h1{font-size:clamp(38px,4.4vw,58px);max-width:16ch}
-.intro p{color:var(--muted);margin:0;max-width:40ch}
-.legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
-.legend button{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 14px;border:1px solid var(--line2);background:none;cursor:pointer;font-size:14px;color:var(--muted)}
-.legend button[aria-pressed=true]{color:var(--ink);border-color:var(--ink)}
+.intro{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;padding-block:clamp(68px,9vw,122px) 40px}
+.intro h1{font-size:clamp(48px,6.2vw,80px);max-width:12ch}
+.intro p{color:var(--muted);margin:0;max-width:40ch;line-height:1.8}
+.legend{display:flex;flex-wrap:wrap;gap:22px;margin-bottom:22px}
+.legend button{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 2px;border:0;border-bottom:1px solid transparent;background:none;cursor:pointer;font-size:13px;letter-spacing:.025em;color:var(--muted)}
+:root[dir=rtl] .legend button,:root[dir=rtl] .steps li{letter-spacing:0}
+.legend button[aria-pressed=true]{color:var(--ink);border-color:var(--red)}
 .legend button[aria-pressed=false] .m{opacity:.35}
 .legend b{font-weight:500;color:var(--quiet);font-variant-numeric:tabular-nums}
 .m{flex:none;display:inline-block;width:16px;height:16px;border-radius:50%}
@@ -25,8 +26,8 @@
 .m.open{border:2px dashed var(--steel);background:rgba(169,194,214,.12)}
 .m.tbc{border:2px solid var(--quiet);background:#3a3b36}
 .m.own{border-radius:2px;transform:rotate(45deg) scale(.82);background:#f1eee8;border:2px solid #111210;outline:1px solid #f1eee8}
-.explore{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);border:1px solid var(--line);background:var(--panel)}
-.mapwrap{padding:18px;border-inline-end:1px solid var(--line)}
+.explore{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);border-block:1px solid var(--line2);background:none}
+.mapwrap{padding-block:22px;padding-inline:0 24px;border-inline-end:1px solid var(--line)}
 .countries{display:flex;gap:14px;align-items:center;font-size:13px;color:var(--quiet);margin-bottom:6px}
 .view{min-height:36px;padding:0 2px;border:0;border-bottom:1px solid transparent;background:none;cursor:pointer;font-size:13px;color:var(--quiet)}
 .view[aria-pressed=true]{color:var(--ink);border-color:var(--red)}
@@ -69,15 +70,15 @@
 .pin.mine .m{animation:pop .9s cubic-bezier(.16,1,.3,1)}
 @keyframes ring{0%{opacity:.8;transform:scale(.6)}100%{opacity:0;transform:scale(1.8)}}
 @keyframes pop{0%{transform:scale(0)}60%{transform:scale(1.6)}100%{transform:scale(1)}}
-.side{padding:22px;display:flex;flex-direction:column;min-height:0}
+.side{padding-block:28px;padding-inline:28px 0;display:flex;flex-direction:column;min-height:0}
 .card .top{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--olive)}
-.card h2{font-size:34px;margin-top:12px}
+.card h2{font-size:clamp(30px,3vw,40px);margin-top:16px}
 .card .city{color:var(--muted);font-size:14px;margin:4px 0 0}
 .card .work{margin:14px 0 0;color:#dedbd3}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-.tags span{font-size:13px;padding:3px 9px;border:1px solid var(--line2);color:#cfccc4}
+.tags span{font-size:12px;padding:3px 8px;border:0;border-bottom:1px solid var(--line2);color:#cfccc4}
 .flag{display:inline-block;margin-top:12px;font-size:13px;color:var(--red-ink)}
-.list{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid var(--line);overflow:auto;max-height:280px}
+.list{list-style:none;margin:24px 0 0;padding:0;border-top:1px solid var(--line);overflow:auto;max-height:320px}
 .list button{display:flex;align-items:center;gap:12px;width:100%;min-height:44px;padding:8px 2px;border:0;border-bottom:1px solid var(--line);background:none;cursor:pointer;text-align:start;color:var(--muted);font-size:15px}
 .list button:hover,.list button[aria-current=true]{color:var(--ink)}
 .list small{margin-inline-start:auto;color:var(--quiet);font-size:13px}
@@ -86,19 +87,20 @@
 .join{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:48px}
 .join h2{font-size:clamp(34px,3.6vw,48px)}
 .join>div>p{color:var(--muted);margin:14px 0 0;max-width:40ch}
-.steps{display:flex;gap:0;list-style:none;margin:0 0 22px;padding:0;border:1px solid var(--line)}
-.steps li{flex:1;padding:12px 14px;font-size:14px;color:var(--quiet);border-inline-end:1px solid var(--line)}
+.steps{display:flex;gap:0;list-style:none;margin:0 0 26px;padding:0;border-bottom:1px solid var(--line)}
+.steps li{flex:1;padding:12px 14px;font-size:13px;letter-spacing:.025em;color:var(--quiet);border:0}
 .steps li:last-child{border:0}
 .steps li[aria-current=step]{color:var(--ink);box-shadow:inset 0 -2px 0 var(--red)}
 .steps li.ok{color:var(--muted)}
-.pane{border:1px solid var(--line);background:var(--panel);padding:26px}
+.pane{border:0;border-block:1px solid var(--line2);background:transparent;padding:28px 0}
 .pane[hidden]{display:none}
 .pane h3{font-size:30px}
 .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
 .linkbtn{background:none;border:0;padding:0;margin-top:16px;color:var(--steel);text-decoration:underline;cursor:pointer;font-size:14px;min-height:44px;text-align:start}
 .ok-line{display:flex;align-items:center;gap:10px;color:var(--ink);margin:0 0 6px}
 @media(max-width:980px){.explore{grid-template-columns:minmax(0,1fr)}.mapwrap{border-inline-end:0;border-bottom:1px solid var(--line)}.join{grid-template-columns:minmax(0,1fr);gap:24px}}
-@media(max-width:600px){.pin b{display:none}.mapwrap{padding:8px}.steps li{padding:10px 8px;font-size:13px}.pane{padding:18px}}
+@media(max-width:600px){.pin b{display:none}.mapwrap{padding:12px 0}.side{padding:24px 0}.steps li{padding:10px 8px;font-size:12px}.pane{padding:22px 0}}
+@media(prefers-reduced-motion:reduce){.pin::before,.cluster.mini::before,.pin[aria-pressed=true]::after{animation:none}}
 </style>
 </head>
 <body>
